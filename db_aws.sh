@@ -3,7 +3,6 @@
 # Variables
 DB_INSTANCE_IDENTIFIER="midawdbmiles"
 DB_ENGINE="mysql"
-DB_ENGINE_VERSION="5.7.30"
 DB_MASTER_USERNAME="rootm"
 DB_MASTER_PASSWORD="rooot1234"
 DB_NAME="dbmiles"
@@ -16,7 +15,6 @@ aws rds create-db-instance \
     --db-instance-identifier $DB_INSTANCE_IDENTIFIER \
     --db-instance-class $DB_INSTANCE_CLASS \
     --engine $DB_ENGINE \
-    --engine-version $DB_ENGINE_VERSION \
     --master-username $DB_MASTER_USERNAME \
     --master-user-password $DB_MASTER_PASSWORD \
     --allocated-storage $DB_ALLOCATED_STORAGE \
