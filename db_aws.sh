@@ -23,7 +23,7 @@ aws ec2 authorize-security-group-ingress \
     --group-id $SECURITY_GROUP_ID \
     --protocol tcp \
     --port $DB_PORT \
-    --source-cidr 0.0.0.0/0
+    --cidr 0.0.0.0/0
 # Crear instancia de base de datos RDS
 aws rds create-db-instance \
     --db-instance-identifier $DB_INSTANCE_IDENTIFIER \
