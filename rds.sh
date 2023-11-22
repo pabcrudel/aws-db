@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Variables
-DB_INSTANCE_IDENTIFIER="midawdbmiles"
+DB_INSTANCE_IDENTIFIER="pabcrudeldb"
 DB_ENGINE="mysql"
 DB_MASTER_USERNAME="rootm"
 DB_MASTER_PASSWORD="rooot1234"
-DB_NAME="dbmiles"
+DB_NAME="pcddb"
 DB_INSTANCE_CLASS="db.t2.micro"
 DB_ALLOCATED_STORAGE=20
 DB_PORT=3306
