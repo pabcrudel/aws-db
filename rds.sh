@@ -44,8 +44,16 @@ echo "La instancia de la base de datos está disponible."
 # Obtener el endpoint de la instancia de la base de datos
 DB_ENDPOINT=$(aws rds describe-db-instances --db-instance-identifier $DB_INSTANCE_IDENTIFIER --query "DBInstances[0].Endpoint.Address" --output text)
 
-
-
 echo "La instancia de la base de datos ha sido creada y el grupo de seguridad para MySQL Workbench ha sido configurado."
-echo "Endpoint de la base de datos: $DB_ENDPOINT"
-echo "ID del grupo de seguridad: $SECURITY_GROUP_ID"
+
+endpoint="Endpoint de la base de datos: $DB_ENDPOINT"
+secGru="ID del grupo de seguridad: $SECURITY_GROUP_ID"
+outputFile="output.txt"
+
+echo -e "\nOutput AWS RDS cli\n" > $outputFile
+
+echo $endpoint
+echo $endpoint >> $outputFile
+
+echo $secGru
+echo -e "$secGru\n" >> $outputFile
